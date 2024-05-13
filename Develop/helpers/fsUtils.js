@@ -1,3 +1,4 @@
+// Variables for fs and util
 const fs = require('fs');
 const util = require('util');
 
