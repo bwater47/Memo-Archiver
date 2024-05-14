@@ -46,7 +46,7 @@ notes.delete('/:note_id', (req, res) => {
 notes.post('/', (req, res) => {
   console.log(req.body);
 
-  const { username, topic, note } = req.body;
+  const { title, note } = req.body;
 
   if (req.body) {
     const newNote = {
