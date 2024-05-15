@@ -8,7 +8,7 @@ const {
 } = require("../helpers/fsUtils");
 
 // GET Route for retrieving all the notes
-notes.get("/", (req, res) => {
+notes.get("/notes", (req, res) => {
   readFromFile("./db/db.json").then((data) => res.json(JSON.parse(data)));
 });
 
@@ -24,9 +24,12 @@ notes.get("/:note_id", (req, res) => {
         : res.json("No note with that ID");
     });
 });
+//needs a notes.post for /notes adds a newNote to the db.json file
 
 // DELETE Route for a specific note
-notes.delete("/:note_id", (req, res) => {
+notes.delete("/notes/:note_id", (req, res) => {
+  // Params attached to reqest takes the parameter from the URL
+  // cant delete id from url
   const noteId = req.params.note_id;
   readFromFile("./db/db.json")
     .then((data) => JSON.parse(data))
@@ -50,7 +53,7 @@ notes.post("/", (req, res) => {
     const newNote = {
       title,
       note,
-      note_id: uuidv4(),
+      id: uuidv4(),
     };
 
     readAndAppend(newNote, "./db/db.json")
