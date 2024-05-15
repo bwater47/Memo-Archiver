@@ -8,6 +8,7 @@ const app = express();
 // Middleware for parsing JSON and urlencoded form data.
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+// localhost:3001/api
 app.use('/api', api);
 // Middleware for serving static files.
 app.use(express.static('public'));
@@ -19,11 +20,6 @@ app.get('/', (req, res) =>
 app.get('/notes', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/notes.html'))
 );
-// GET Route for the notes API TO GET RENDERED notes
-// app.get('/api/notes', (req, res) => {
-//   console.log(note)
-//   return res.json(note);
-// });
 // GET Route for all other pages
 app.get('*', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/index.html'))

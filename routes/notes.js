@@ -13,7 +13,7 @@ notes.get("/notes", (req, res) => {
 });
 
 // GET Route for a specific note
-notes.get("/:note_id", (req, res) => {
+notes.get("/notes/:note_id", (req, res) => {
   const noteId = req.params.note_id;
   readFromFile("./db/db.json")
     .then((data) => JSON.parse(data))
@@ -28,14 +28,12 @@ notes.get("/:note_id", (req, res) => {
 
 // DELETE Route for a specific note
 notes.delete("/notes/:note_id", (req, res) => {
-  // Params attached to reqest takes the parameter from the URL
-  // cant delete id from url
   const noteId = req.params.note_id;
   readFromFile("./db/db.json")
     .then((data) => JSON.parse(data))
     .then((json) => {
       // Make a new array of all notes except the one with the ID provided in the URL
-      const result = json.filter((note) => note.note_id !== noteId);
+      const result = json.filter((note) => note.id !== noteId);
 
       // Save that array to the filesystem
       writeToFile("./db/db.json", result);
@@ -46,19 +44,18 @@ notes.delete("/notes/:note_id", (req, res) => {
 });
 
 // POST Route for a new UX/UI note
-notes.post("/", (req, res) => {
-  const { title, note } = req.body;
+notes.post("/notes", (req, res) => {
+  const { title, text } = req.body;
 
-  if (title && note) {
+  if (title && text) {
     const newNote = {
       title,
-      note,
+      text,
       id: uuidv4(),
     };
 
     readAndAppend(newNote, "./db/db.json")
-      .then(() => res.json(`Note added successfully`))
-      .catch((err) => res.status(500).send("Error in adding note"));
+    res.status(200).json(`Note added successfully`)
   } else {
     res.status(400).send("Both title and note ar required");
   }
