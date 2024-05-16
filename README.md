@@ -1,7 +1,7 @@
-# SVG-Logo-Creator
+# Memo-Archiver
 ![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
 - 
-This application generates a logo based on the prompted questions inside of the VS Code studio.
+This application is for note taking, and is deployed using the free version of render.
 
 ## Description
 
@@ -21,7 +21,7 @@ Here is a table of contents to make it easy for users to locate which section th
 
 ## Installation
 
-You'll need to install GitBash, VS Code, Node.js, NPM, Express, and Insomnia. From here you will need knowledge on how to clone a repo from GitHub over to your device to store it locally. Once its stored locally in your device you can open VSCode. Lastly once VSCode is running open the CLI (Command-Line-Interface), type npm install for the node_modules package, then type npm run start. Once you've done this the website will be deployed locally for testing, debugging, and developing.
+You'll need to install GitBash, VS Code, Node.js, NPM, Express, and Render. From here you will need knowledge on how to clone a repo from GitHub over to your device to store it locally. Once its stored locally in your device you can open VSCode. Lastly once VSCode is running open the CLI (Command-Line-Interface), type npm install for the node_modules package, then type npm run start. Once you've done this the website will be deployed locally for testing, debugging, and developing.
 
 ## Usage
 
@@ -58,21 +58,21 @@ Contributing is allowed if you're in the U of U Coding Bootcamp. Contact us on t
 
 ## Authors and Acknowledgment
 
-Routing. Express routing. (05/10/24). https://expressjs.com/en/guide/routing.html#express-router 
+Cloud application hosting for developers. Render. (05/15/24). https://dashboard.render.com/ 
 
-Introduction to insomnia. Introduction to Insomnia | Insomnia Docs. (05/10/24). https://docs.insomnia.rest/insomnia/get-started 
+Routing. Express routing. (05/15/24). https://expressjs.com/en/guide/routing.html#express-router 
 
-CLI commands. npm Docs. (05/10/24). https://docs.npmjs.com/cli/v10/commands
+CLI commands. npm Docs. (05/15/24). https://docs.npmjs.com/cli/v10/commands
 
-Node.js V22.0.0 documentation. Command-line API | Node.js v22.0.0 Documentation. (05/10/24). https://nodejs.org/api/cli.html
+Node.js V22.0.0 documentation. Command-line API | Node.js v22.0.0 Documentation. (05/15/24). https://nodejs.org/api/cli.html
 
-MozDevNet. (05/10/24). Resources for developers, by developers. MDN Web Docs. https://developer.mozilla.org/en-US/ 
+MozDevNet. (05/15/24). Resources for developers, by developers. MDN Web Docs. https://developer.mozilla.org/en-US/ 
 
-Bootcamp Spot. (05/10/24). https://bootcampspot.com/
+Bootcamp Spot. (05/15/24). https://bootcampspot.com/
 
-W3Schools Online Web Tutorials. (05/10/24). https://www.w3schools.com/
+W3Schools Online Web Tutorials. (05/15/24). https://www.w3schools.com/
 
-Chatgpt. ChatGPT. (05/10/24). https://openai.com/chatgpt
+Chatgpt. ChatGPT. (05/15/24). https://openai.com/chatgpt
 
 • Please note: While ChatGPT was utilized to generate dialog content for the README file, it was not involved in the generation of any code, HTML edits, CSS edits, or other assets within the repository apart from this README specifically.
 
