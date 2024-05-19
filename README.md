@@ -29,9 +29,9 @@ Take notes conveniently on your device at anytime with the Memo Archiver. Store 
 
 - <strong>Memo Archiver Screenshots:</strong>
 
-![#](./examples/#.png)
-![#](./examples/#.png)
-![#](./examples/#.png)
+![#](./images/HomePageOnRender.png)
+![#](./images/NoteSaveWithFirstNote.png)
+![#](./images/NoteAddWithDeletion.png)
 
 ## Support
 
